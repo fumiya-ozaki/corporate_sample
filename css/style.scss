@@ -80,9 +80,11 @@ p{
     }
   }
   #mainVisual{
-    background-color: gray;
+    background-image: url(../images/business_06.jpeg);
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 300px;   //あとで消す
+    height: 400px;   //あとで消す
   }
   .topNavi{
     margin: 1rem 0;
@@ -92,6 +94,12 @@ p{
       width: 30%;
       display: flex;
       flex-direction: column;
+      .topNaviPhoto{
+        width:100%;
+        img{
+          width: 100%;
+        }
+      }
       .topNaviDetail{
         height: 100%;
         display: flex;
@@ -132,6 +140,18 @@ p{
             a{
               margin-left: 0;
             }
+          }
+          .tag_gyoumu{
+            padding: 0.3rem;
+            color: white;
+            background-color: rgb(6, 82, 6);
+            border-radius: 5px;
+          }
+          .tag_release{
+            padding: 0.3rem;
+            color: white;
+            background-color: red;
+            border-radius: 5px;
           }
         }
       }
@@ -188,7 +208,7 @@ p{
     border: none;
     color: #fff;
     padding: 7px 20px;
-    margin: 0px auto;
+    margin: 2rem auto;
     display: block;
     font-size: 17px;
     border-radius: 6px;
@@ -227,15 +247,15 @@ p{
       margin:0;
       padding:0 0 0 30px;
   }
-
   table td li {
       margin:0;
       padding:0;
   }
-
   textarea{
     width: 100%;
   }
+
+
 
 } //PC end------------------------------------------------------------------------------------
 
@@ -300,7 +320,9 @@ p{
   }
 
   #mainVisual{
-    background-color: gray;
+    background-image: url(../images/business_06.jpeg);
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 300px;   //あとで消す
   }
@@ -309,14 +331,20 @@ p{
     display: flex;
     flex-direction: column;
     .topNaviColumn{
+      background-color: red;
       width: 100%;
       display: flex;
       flex-direction: column;
+      .topNaviPhoto{
+        width: 100%;
+        img{
+          width: 100%;
+        }
       .topNaviDetail{
-        height: 100%;
         display: flex;
         flex-direction: column-reverse;
         padding-right: 0;
+        }  
         a{
           text-align: right;
         }
@@ -528,7 +556,9 @@ p{
   }
 
   #mainVisual{
-    background-color: gray;
+    background-image: url(../images/business_06.jpeg);
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 300px;   //あとで消す
   }
@@ -540,6 +570,12 @@ p{
       width: 30%;
       display: flex;
       flex-direction: column;
+      .topNaviPhoto{
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
       .topNaviDetail{
         height: 100%;
         display: flex;
@@ -564,6 +600,19 @@ p{
           margin-right: 1rem;
         }
         dd{
+          .tag_gyoumu{
+            padding: 0.3rem;
+            color: white;
+            background-color: rgb(6, 82, 6);
+            border-radius: 5px;
+          }
+          .tag_release{
+            padding: 0.3rem;
+            color: white;
+            background-color: red;
+            border-radius: 5px;
+          }
+
           a{
             margin-left: 1rem;
           }
@@ -603,12 +652,9 @@ p{
   .bnrL{
     ul{
       display: flex;
+      flex-direction: column;
       li{
-        margin-top: 2rem;
-        margin-left: 2rem;
-      }
-      li:first-of-type{
-        margin-left: 0;
+        margin-top: 1rem;
       }
     }
   }
