@@ -20,10 +20,13 @@
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 959px) {
-  .gnav-hidden {
-    /* display: none; */
+@media screen and (min-width: 960px) {
+  .humb-menu {
+    display: none;
   }
+}
+
+@media screen and (min-width: 481px) and (max-width: 959px) {
   #gnav-btn {
     color: gray;
     padding: 10px;
@@ -51,6 +54,7 @@
     padding: 1.5rem;
   }
   .humb-menu label {
+    display: block;
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
@@ -62,6 +66,7 @@
   }
   .humb-menu .accshow {
     height: 0;
+    padding: 0;
     overflow: hidden;
   }
   .humb-menu .accshow p {

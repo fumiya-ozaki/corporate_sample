@@ -19,6 +19,9 @@ $b:blue;
 
 // pc start***********************************************************************************
 @media screen and (min-width:960px) {
+  .humb-menu{
+    display: none;
+  }
 
 
 
@@ -31,7 +34,6 @@ $b:blue;
 
 // tablet end start***************************************************************************
 @media screen and (min-width:481px) and (max-width:959px){
-  .gnav-hidden{display: none;}
   #gnav-btn{
     color: gray;
     padding: 10px;
