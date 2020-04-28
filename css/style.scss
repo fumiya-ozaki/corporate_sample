@@ -1,0 +1,88 @@
+
+// ボーダーボックス設定
+*{ box-sizing:border-box; }
+// 改行
+@media screen and (min-width: 480px){	.br-pc { display:block; } .br-sp { display:none; } }
+// <br class="br-pc" /> PC/tabletの改行
+@media screen and (max-width: 480px){	.br-pc { display:none; } .br-sp { display:block; } }
+// <br class="br-sp" /> smartphoneの改行
+
+// 色の変数
+$a:gray;
+$b:blue;
+
+// mixin  @include aaaaaaa; で呼び出し
+@mixin aaaaaaa {
+
+  }
+
+
+// pc start***********************************************************************************
+@media screen and (min-width:960px) {
+
+
+
+} //PC end------------------------------------------------------------------------------------
+
+// smart phone start**************************************************************************
+@media screen and (max-width:480px) {
+  
+}//smart phone end----------------------------------------------------------------------------
+
+// tablet end start***************************************************************************
+@media screen and (min-width:481px) and (max-width:959px){
+  .gnav-hidden{display: none;}
+  #gnav-btn{
+    color: gray;
+    padding: 10px;
+    font-size: 30px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    background-color: white;
+    border: solid 1px rgb(209, 202, 202);
+    border-radius: 3px;
+  }
+  
+  #gnav-input:checked ~ #gnav-content {top: 0;}
+  
+  #gnav-content{
+    position: fixed;
+    top:-100%;
+    left:0;
+    z-index: 10;
+    transition: 0.3s;
+    width: 100%;
+  }
+  .humb-menu{
+    &__title{
+      padding : 1.5rem;
+    }
+    label{
+      display: block;
+      display: flex;
+      justify-content: space-between;
+      padding : 1.5rem;
+      cursor :pointer;
+      border-top: 0.5px solid rgb(199, 197, 197);
+    }
+    input {
+      display: none;
+    }
+    .accshow{
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      p{
+        padding : 1.5rem;
+      }
+    }
+    .cssacc:checked + .accshow {
+      height: auto;
+    }
+  }
+  
+
+}//tablet end---------------------------------------------------------------------------------
+
