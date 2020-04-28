@@ -217,6 +217,9 @@ p {
     margin: 0;
     padding: 0;
   }
+  textarea {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -394,7 +397,7 @@ p {
     font-size: 12px;
   }
   table {
-    margin: 10px;
+    width: 100%;
     border-collapse: collapse;
     border: 1px solid #999;
     border-spacing: 0;
@@ -421,6 +424,9 @@ p {
   table td li {
     margin: 0;
     padding: 0;
+  }
+  textarea {
+    width: 100%;
   }
 }
 
@@ -616,5 +622,8 @@ p {
   table td li {
     margin: 0;
     padding: 0;
+  }
+  textarea {
+    width: 100%;
   }
 }

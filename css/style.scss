@@ -233,6 +233,10 @@ p{
       padding:0;
   }
 
+  textarea{
+    width: 100%;
+  }
+
 } //PC end------------------------------------------------------------------------------------
 
 // smart phone start**************************************************************************
@@ -424,8 +428,7 @@ p{
   }
 
   table {
-      // width:100%;
-      margin:10px;
+      width:100%;
       border-collapse:collapse;
       border:1px solid #999;
       border-spacing:0;
@@ -457,6 +460,10 @@ p{
       margin:0;
       padding:0;
   }
+  textarea{
+    width: 100%;
+  }
+
   
 }//smart phone end----------------------------------------------------------------------------
 
@@ -673,6 +680,9 @@ p{
   table td li {
       margin:0;
       padding:0;
+  }
+  textarea{
+    width: 100%;
   }
 
 
