@@ -179,8 +179,59 @@ p{
     text-align: center;
   }
 
+  .btn{
+    text-decoration: none;
+  }
+  .btn1{
+    min-width: 200px;
+    background: #f07d00;
+    border: none;
+    color: #fff;
+    padding: 7px 20px;
+    margin: 0px auto;
+    display: block;
+    font-size: 17px;
+    border-radius: 6px;
+  }
 
+  table {
+    font-size:12px;
+  }
 
+  table {
+      width:100%;
+      // margin:10px;
+      border-collapse:collapse;
+      border:1px solid #999;
+      border-spacing:0;
+      line-height:1.8;
+  }
+
+  table th {
+      padding:5px;
+      border:1px solid #999;
+      border-width:0 0 1px 1px;
+      background:#EFEBEF;
+      font-weight:bold;
+      text-align:left;
+  }
+
+  table td {
+      padding:5px;
+      border:1px solid #999;
+      border-width:0 0 1px 1px;
+      text-align:left;
+  }
+
+  table td ol {
+      margin:0;
+      padding:0 0 0 30px;
+  }
+
+  table td li {
+      margin:0;
+      padding:0;
+  }
 
 } //PC end------------------------------------------------------------------------------------
 
@@ -353,6 +404,59 @@ p{
     text-align: center;
   }
 
+  .btn{
+    text-decoration: none;
+  }
+  .btn1{
+    min-width: 200px;
+    background: #f07d00;
+    border: none;
+    color: #fff;
+    padding: 7px 20px;
+    margin: 0px auto;
+    display: block;
+    font-size: 17px;
+    border-radius: 6px;
+  }
+
+  table {
+    font-size:12px;
+  }
+
+  table {
+      // width:100%;
+      margin:10px;
+      border-collapse:collapse;
+      border:1px solid #999;
+      border-spacing:0;
+      line-height:1.8;
+  }
+
+  table th {
+      padding:5px;
+      border:1px solid #999;
+      border-width:0 0 1px 1px;
+      background:#EFEBEF;
+      font-weight:bold;
+      text-align:left;
+  }
+
+  table td {
+      padding:5px;
+      border:1px solid #999;
+      border-width:0 0 1px 1px;
+      text-align:left;
+  }
+
+  table td ol {
+      margin:0;
+      padding:0 0 0 30px;
+  }
+
+  table td li {
+      margin:0;
+      padding:0;
+  }
   
 }//smart phone end----------------------------------------------------------------------------
 
@@ -515,6 +619,60 @@ p{
   }
   #footer{
     text-align: center;
+  }
+
+  .btn{
+    text-decoration: none;
+  }
+  .btn1{
+    min-width: 200px;
+    background: #f07d00;
+    border: none;
+    color: #fff;
+    padding: 7px 20px;
+    margin: 0px auto;
+    display: block;
+    font-size: 17px;
+    border-radius: 6px;
+  }
+
+  table {
+    font-size:12px;
+  }
+
+  table {
+      width:100%;
+      margin:10px;
+      border-collapse:collapse;
+      border:1px solid #999;
+      border-spacing:0;
+      line-height:1.8;
+  }
+
+  table th {
+      padding:5px;
+      border:1px solid #999;
+      border-width:0 0 1px 1px;
+      background:#EFEBEF;
+      font-weight:bold;
+      text-align:left;
+  }
+
+  table td {
+      padding:5px;
+      border:1px solid #999;
+      border-width:0 0 1px 1px;
+      text-align:left;
+  }
+
+  table td ol {
+      margin:0;
+      padding:0 0 0 30px;
+  }
+
+  table td li {
+      margin:0;
+      padding:0;
   }
 
 
