@@ -14,15 +14,15 @@
   <div id="container">
 
     <nav id="header"><!--headerstart-->
-      <h1><a href="index.html">"CORPORATE_SAMPLE_SITE"</a></h1>
+      <h1><a href="<?php echo get_stylesheet_uri(); ?>index">"CORPORATE_SAMPLE_SITE"</a></h1>
       <div id="menu">
         <ul>
-          <li class="home"><a href="index.html">ホーム</a></li>
-          <li><a href="service.html">事業内容</a></li>
-          <li><a href="company.html">会社概要</a></li>
-          <li><a href="archive.html">お知らせ</a></li>
-          <li><a href="single.html">ブログ</a></li>                
-          <li><a href="contact.html">お問い合わせ</a></li>
+          <li class="home"><a href="<?php home_url(); ?>">ホーム</a></li>
+          <li><a href="<?php home_url(); ?>service">事業内容</a></li>
+          <li><a href="<?php home_url(); ?>company">会社概要</a></li>
+          <li><a href="<?php home_url(); ?>archive">お知らせ</a></li>
+          <li><a href="<?php home_url(); ?>archive">ブログ</a></li>                
+          <li><a href="<?php home_url(); ?>contact">お問い合わせ</a></li>
         </ul>
       </div>
     </nav><!--headerend-->
