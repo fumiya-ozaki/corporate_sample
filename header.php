@@ -14,7 +14,7 @@
   <div id="container">
 
     <nav id="header"><!--headerstart-->
-      <h1><a href="<?php echo get_stylesheet_uri(); ?>index">"CORPORATE_SAMPLE_SITE"</a></h1>
+      <h1><a href="<?php echo home_url(); ?>">"CORPORATE_SAMPLE_SITE"</a></h1>
       <div id="menu">
         <ul>
           <?php wp_nav_menu( array(
