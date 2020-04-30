@@ -28,84 +28,51 @@
       <div class="information"><!--informationstart-->
         <h2>INFORMATION</h2>
         <dl>
+        <!--loopstart-->
+        <?php
+          $infoPosts = get_posts('numberposts=4&category=8');
+          foreach($infoPosts as $post): 
+        ?>
+
           <div class="contents_box">
-            <dt>2013-08-04</dt>
+            <dt><?php the_time('Y-m-d'); ?></dt>
             <dd>
-              <span class="tab tag_gyoumu">業務について</span>
-              <a href="<?php home_url(); ?>single">2012年（平成24年）度の採用情報</a>を更新しました。
+              <span class="tab <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->slug; } ?>"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>を更新しました。
             </dd>
           </div>
-          <div class="contents_box">
-            <dt>2013-08-03</dt>
-            <dd>
-              <span class="tab tag_release">リリース</span>
-              <a href="<?php home_url(); ?>single">制作実績のページ</a>を更新しました。
-            </dd>
-          </div>
-          <div class="contents_box">
-            <dt>2013-08-02</dt>
-            <dd>
-              <span class="tab tag_gyoumu">業務について</span>
-              <a href="<?php home_url(); ?>single">2012年（平成24年）度の採用情報</a>を更新しました。
-            </dd>
-          </div>
-          <div class="contents_box">
-            <dt>2013-08-01</dt>
-            <dd>
-              <span class="tab tag_release">リリース</span>
-              <a href="<?php home_url(); ?>single">制作実績のページ</a>を更新しました。
-            </dd>
-          </div>
+
+        <!--loopend-->
+        <?php endforeach; ?>
+
         </dl>
       </div><!--informationend-->
       
       <div class="information"><!--blogstart-->
         <h2>Blog</h2>
         <dl>
+
+          <!--loopstart-->
+        <?php
+          $infoPosts = get_posts('numberposts=4&category=9');
+          foreach($infoPosts as $post): 
+        ?>
+
           <div class="contents_box">
-            <dt>2013-08-04</dt>
+            <dt><?php the_time('Y-m-d'); ?></dt>
             <dd>
               <div class="b_img">
                 <img src="<?php echo get_template_directory_uri();?>/images/cat_3.jpeg">
               </div>
               <div class="b_right">
-                <a href="<?php home_url(); ?>single">タイトルが入ります。</a>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
               </div>
             </dd>
           </div>
-          <div class="contents_box">
-            <dt>2013-08-04</dt>
-            <dd>
-              <div class="b_img">
-                <img src="<?php echo get_template_directory_uri();?>/images/cat_3.jpeg">
-              </div>
-              <div class="b_right">
-                <a href="<?php home_url(); ?>single">タイトルが入ります。</a>
-              </div>
-            </dd>
-          </div>
-          <div class="contents_box">
-            <dt>2013-08-04</dt>
-            <dd>
-              <div class="b_img">
-                <img src="<?php echo get_template_directory_uri();?>/images/cat_3.jpeg">
-              </div>
-              <div class="b_right">
-                <a href="<?php home_url(); ?>single">タイトルが入ります。</a>
-              </div>
-            </dd>
-          </div>
-          <div class="contents_box">
-            <dt>2013-08-04</dt>
-            <dd>
-              <div class="b_img">
-                <img src="<?php echo get_template_directory_uri();?>/images/cat_3.jpeg">
-              </div>
-              <div class="b_right">
-                <a href="<?php home_url(); ?>single">タイトルが入ります。</a>
-              </div>
-            </dd>
-          </div>
+
+        <!--loopend-->
+        <?php endforeach; ?>
+
           </dl>
         </div><!--blogend-->
         

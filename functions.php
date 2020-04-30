@@ -7,4 +7,10 @@ array(
 'place_sidebar' => 'サイドメニュー',
 'place_footer' => 'フッター',
 )
-); ?>
+);
+
+//サムネイル機能追加
+add_theme_support('post-thumbnails');
+add_image_size('thumbside', 85, 85, true);
+
+?>

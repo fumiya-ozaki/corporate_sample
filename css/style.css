@@ -146,13 +146,13 @@ p {
   .wrapper #conL .contents_box dd .b_right a {
     margin-left: 0;
   }
-  .wrapper #conL .contents_box dd .tag_gyoumu {
+  .wrapper #conL .contents_box dd .gyoumu {
     padding: 0.3rem;
     color: white;
     background-color: #065206;
     border-radius: 5px;
   }
-  .wrapper #conL .contents_box dd .tag_release {
+  .wrapper #conL .contents_box dd .release {
     padding: 0.3rem;
     color: white;
     background-color: red;
@@ -563,13 +563,13 @@ p {
   .wrapper #conL .contents_box dd {
     display: flex;
   }
-  .wrapper #conL .contents_box dd .tag_gyoumu {
+  .wrapper #conL .contents_box dd .gyoumu {
     padding: 0.3rem;
     color: white;
     background-color: #065206;
     border-radius: 5px;
   }
-  .wrapper #conL .contents_box dd .tag_release {
+  .wrapper #conL .contents_box dd .release {
     padding: 0.3rem;
     color: white;
     background-color: red;
