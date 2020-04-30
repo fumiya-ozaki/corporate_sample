@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-    <div class="wrapper">
-    <div id="conL">
+    <div class="wrapper"><!--wrapperstart-->
+    <div id="conL"><!--conLstart-->
 
 <?php if (in_category(array('9'))) {?>
       <div class="information"><!--blogstart-->

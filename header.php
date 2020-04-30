@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css" />    <!--reset.css-->
   <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet"><!--書き換え-->
   <title>corporate_sample</title>
-  <?php wp_head(); ?>
+<?php wp_head(); ?><!--headerfookpoint-->
 </head><!--headend-->
 
 <body> <!--bodystart-->
@@ -17,8 +17,9 @@
       <h1><a href="<?php echo home_url(); ?>">"CORPORATE_SAMPLE_SITE"</a></h1>
       <div id="menu">
         <ul>
+          <!--headerのwordpress化-->
           <?php wp_nav_menu( array(
-            'theme_location'=>'place_global2', 
+            'theme_location'=>'place_global2', //メニュー名place_global2
             'container'     =>'', 
             'menu_class'    =>'',
             'items_wrap' => '%3$s',//<ul>を出力しない
