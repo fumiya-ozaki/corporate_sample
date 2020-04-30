@@ -11,6 +11,6 @@ array(
 
 //サムネイル機能追加
 add_theme_support('post-thumbnails');
-add_image_size('thumbside', 85, 85, true);
+add_image_size('thumbside', 85, 50, true);
 
 ?>

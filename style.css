@@ -156,7 +156,7 @@ p {
   .wrapper #conL .contents_box dd .b_right a {
     margin-left: 0;
   }
-  .wrapper #conL .contents_box dd .gyoumu {
+  .wrapper #conL .contents_box dd .work {
     padding: 0.3rem;
     color: white;
     background-color: #065206;
@@ -573,7 +573,7 @@ p {
   .wrapper #conL .contents_box dd {
     display: flex;
   }
-  .wrapper #conL .contents_box dd .gyoumu {
+  .wrapper #conL .contents_box dd .work {
     padding: 0.3rem;
     color: white;
     background-color: #065206;

@@ -62,7 +62,7 @@
             <dt><?php the_time('Y-m-d'); ?></dt>
             <dd>
               <div class="b_img">
-                <img src="<?php echo get_template_directory_uri();?>/images/cat_3.jpeg">
+                <?php the_post_thumbnail('thumbside'); ?>
               </div>
               <div class="b_right">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
