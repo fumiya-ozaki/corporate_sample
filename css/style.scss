@@ -1,208 +1,314 @@
-
 // ボーダーボックス設定
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
 // 改行
-@media screen and (min-width: 480px){	.br-pc { display:block; } .br-sp { display:none; } }
+@media screen and (min-width: 480px) {
+  .br-pc {
+    display: block;
+  }
+  .br-sp {
+    display: none;
+  }
+}
 // <br class="br-pc" /> PC/tabletの改行
-@media screen and (max-width: 480px){	.br-pc { display:none; } .br-sp { display:block; } }
+@media screen and (max-width: 480px) {
+  .br-pc {
+    display: none;
+  }
+  .br-sp {
+    display: block;
+  }
+}
 // <br class="br-sp" /> smartphoneの改行
 
 // 色の変数
-$a:gray;
-$b:blue;
+$a: gray;
+$b: blue;
 
 // mixin  @include aaaaaaa; で呼び出し
 @mixin aaaaaaa {
 }
 
-a{
+a {
   // text-decoration: none;
   color: black;
 }
 
-h2{
+h2 {
   color: white;
   padding: 0.5rem;
-  background: rgb(0,6,255);
-  background: linear-gradient(180deg, rgba(0,6,255,1) 0%, rgba(0,147,255,1) 100%);
+  background: rgb(0, 6, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 6, 255, 1) 0%,
+    rgba(0, 147, 255, 1) 100%
+  );
 }
-h3{
-  background: rgb(219,219,219);
-  background: linear-gradient(0deg, rgba(219,219,219,1) 46%, rgba(163,163,163,1) 100%);
+h3 {
+  background: rgb(219, 219, 219);
+  background: linear-gradient(
+    0deg,
+    rgba(219, 219, 219, 1) 46%,
+    rgba(163, 163, 163, 1) 100%
+  );
   padding: 0.5rem;
 }
-p{
+p {
   margin: 1rem 0;
 }
 
 // pc start***********************************************************************************
-@media screen and (min-width:960px) {
-  #container{
-    margin:1rem;
+@media screen and (min-width: 960px) {
+  #container {
+    margin: 1rem;
   }
-  .humb-menu{
+  .humb-menu {
     display: none;
   }
 
-  #header{
+  // headerstart
+  #header {
     padding: 3rem 0;
     display: flex;
     justify-content: space-between;
-    #menu{
-      ul{
-        li{
+    #menu {
+      ul {
+        li {
           float: left;
           padding-left: 3rem;
-          a{
+          a {
             text-decoration: none;
             position: relative;
           }
-          a:hover{
+          a:hover {
             opacity: 0.5;
           }
           a:hover:before {
-            content: '';
-            position: absolute;//親要素に固定
+            content: "";
+            position: absolute; //親要素に固定
             left: 50%; //親要素の左端から50%(中央寄)
-            bottom: -10px;/*線の上下位置*/
-            width: 40px;/*線の長さ*/
-            height: 2px;/*線の太さ*/
+            bottom: -10px; /*線の上下位置*/
+            width: 40px; /*線の長さ*/
+            height: 2px; /*線の太さ*/
             -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);/*位置調整*/
-            background-color:black;/*線の色*/
+            transform: translateX(-50%); /*位置調整*/
+            background-color: black; /*線の色*/
             // border-radius: 2px;/*線の丸み*/
           }
         }
-
       }
     }
   }
-  #mainVisual{
+  // headerend
+
+  // mainvisualstart
+  #mainVisual {
     background-image: url(../images/business_06.jpeg);
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 400px;   //あとで消す
+    height: 400px; //仮の高さ
   }
-  .topNavi{
-    margin: 1rem 0;
+  // mainvisualend
+
+  // topNavistart
+  .topNavi {
+    width: 90%;
+    margin: 1rem auto ;
     display: flex;
-    justify-content: space-between;
-    .topNaviColumn{
-      width: 30%;
+    justify-content: space-around;
+    .topNaviColumn {
+      width: 25%;
       display: flex;
       flex-direction: column;
-      .topNaviPhoto{
-        width:100%;
-        img{
+      position: relative;
+      p{
+        margin-bottom: 2rem;
+      }
+      .topNaviPhoto {
+        margin: 1rem 0;
+        width: 100%;
+       
+        img {
           width: 100%;
+          height: 300px;
+          object-fit: scale-down;
         }
       }
-      .topNaviDetail{
+      .topNaviDetail {
         height: 100%;
-        display: flex;
-        flex-direction: column-reverse;
         padding-right: 0;
-        a{
+        position: relative;
+        a {
+          position: absolute;
+          bottom: 0;
+          right: 0;
           text-align: right;
+          text-decoration: none;
         }
+        a:hover {
+          opacity: 0.5;
+        }
+        a:hover:before {
+          content: "";
+          position: absolute; //親要素に固定
+          left:   0%; //親要素の左端から50%(中央寄)
+          bottom: -5px; /*線の上下位置*/
+          width: 100%; /*線の長さ*/
+          height: 2px; /*線の太さ*/
+          -webkit-transform: translateX(0%);
+          transform: translateX(0%); /*位置調整*/
+          background-color: black; /*線の色*/
+          border-radius: 5px;/*線の丸み*/
+        }
+      }
+    }
+  }
+  // topNaviend
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    #conL {
+      width: 70%;
+      .contents_box {
+        width: 100%;
+        margin: 1rem 0;
+
+        a {
+          text-decoration: none;
+          position: relative;
+        }
+        a:hover {
+          opacity: 0.5;
+        }
+        a:hover:before {
+          content: "";
+          position: absolute; //親要素に固定
+          left: 50%; //親要素の左端から50%(中央寄)
+          bottom: 0px; /*線の上下位置*/
+          width: 100%; /*線の長さ*/
+          height: 2px; /*線の太さ*/
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); /*位置調整*/
+          background-color: black; /*線の色*/
+          // border-radius: 2px;/*線の丸み*/
+        }
+        
+        ol {
+          display: flex;
+          time,
+          span {
+            height: 100%;
+            margin-right: 2rem;
+            .release {
+              color: white;
+              background-color: rgb(187, 17, 17);
+              border-radius: 3px;
+              padding: 0.5rem;
+            }
+            .work {
+              color: white;
+              background-color: green;
+              border-radius: 3px;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+    #conR {
+      width: 30%;
+      margin-left: 1rem;
+      width: 30%;
+    }
+  }
+
+  .submenu {
+    h4{padding-left: 0.5rem;}
+    li {
+      padding: 0.25rem;
+      a {
+        margin-left: 1rem;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        text-decoration: none;
+      }
+      a:hover {
+        opacity: 0.5;
+      }
+      a:hover:before {
+        content: "";
+        position: absolute; //親要素に固定
+        left:   0%; //親要素の左端から50%(中央寄)
+        bottom: -5px; /*線の上下位置*/
+        width: 100%; /*線の長さ*/
+        height: 2px; /*線の太さ*/
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%); /*位置調整*/
+        background-color: black; /*線の色*/
+        border-radius: 5px;/*線の丸み*/
       }
     }
   }
 
-  .wrapper{
-    display: flex;
-    justify-content: space-between;
-    #conL{
-      width: 70%;
-      .contents_box{
-        width: 100%;
-        margin: 1rem 0;
-        dt{
-          float: left;
-          margin-right: 1rem;
-        }
-        dd{
-          a{
-            margin-left: 1rem;
-          }
-          display: flex;
-          .b_img{
-            margin: 0 0.5rem;
-            img{
-              height: 50px;
-            }
-          }
-          .b_right{
-            padding: 0 1rem;
-            a{
-              margin-left: 0;
-            }
-          }
-          .gyoumu{
-            padding: 0.3rem;
-            color: white;
-            background-color: rgb(6, 82, 6);
-            border-radius: 5px;
-          }
-          .release{
-            padding: 0.3rem;
-            color: white;
-            background-color: red;
-            border-radius: 5px;
-          }
-        }
-      }
-    }
-    #conR{
-      width: 30%;
-      margin-left: 1rem;
-      width: 30%;
-      h4 , a{
-        padding-left: 1rem;
-      }
-      
-    }
-  }
-  .submenu{
-    li{
-      padding: 0.25rem;
-    }
-  }
-  .bnrL{
-    ul{
+
+  .bnrL {
+    ul {
       display: flex;
-      li{
+      li {
         margin-top: 2rem;
         margin-left: 2rem;
       }
-      li:first-of-type{
+      li:first-of-type {
         margin-left: 0;
       }
     }
   }
 
-  #footMenu{
+  #footMenu {
     margin: 2rem;
-    ul{
+    ul {
       width: 50%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      li{
+      li {
+        a {
+          position: relative;
+          bottom: 0;
+          right: 0;
+          text-decoration: none;
+        }
+        a:hover {
+          opacity: 0.5;
+        }
+        a:hover:before {
+          content: "";
+          position: absolute; //親要素に固定
+          left:   0%; //親要素の左端から50%(中央寄)
+          bottom: -5px; /*線の上下位置*/
+          width: 100%; /*線の長さ*/
+          height: 2px; /*線の太さ*/
+          -webkit-transform: translateX(0%);
+          transform: translateX(0%); /*位置調整*/
+          background-color: black; /*線の色*/
+          border-radius: 5px;/*線の丸み*/
+        }
+
       }
     }
   }
-  #footer{
+  #footer {
     text-align: center;
   }
 
-  .btn{
+  .btn {
     text-decoration: none;
   }
-  .btn1{
+  .btn1 {
     min-width: 200px;
     background: #f07d00;
     border: none;
@@ -215,59 +321,56 @@ p{
   }
 
   table {
-    font-size:12px;
+    font-size: 12px;
   }
 
   table {
-      width:100%;
-      // margin:10px;
-      border-collapse:collapse;
-      border:1px solid #999;
-      border-spacing:0;
-      line-height:1.8;
+    width: 100%;
+    // margin:10px;
+    border-collapse: collapse;
+    border: 1px solid #999;
+    border-spacing: 0;
+    line-height: 1.8;
   }
 
   table th {
-      padding:5px;
-      border:1px solid #999;
-      border-width:0 0 1px 1px;
-      background:#EFEBEF;
-      font-weight:bold;
-      text-align:left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-width: 0 0 1px 1px;
+    background: #efebef;
+    font-weight: bold;
+    text-align: left;
   }
 
   table td {
-      padding:5px;
-      border:1px solid #999;
-      border-width:0 0 1px 1px;
-      text-align:left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-width: 0 0 1px 1px;
+    text-align: left;
   }
 
   table td ol {
-      margin:0;
-      padding:0 0 0 30px;
+    margin: 0;
+    padding: 0 0 0 30px;
   }
   table td li {
-      margin:0;
-      padding:0;
+    margin: 0;
+    padding: 0;
   }
-  textarea{
+  textarea {
     width: 100%;
   }
-
-
-
 } //PC end------------------------------------------------------------------------------------
 
 // smart phone start**************************************************************************
-@media screen and (max-width:480px) {
-  #header{
+@media screen and (max-width: 480px) {
+  #header {
     padding: 1rem 0;
-    #menu{
+    #menu {
       display: none;
     }
   }
-  #gnav-btn{
+  #gnav-btn {
     color: gray;
     padding: 10px;
     font-size: 30px;
@@ -279,39 +382,41 @@ p{
     border: solid 1px rgb(209, 202, 202);
     border-radius: 3px;
   }
-  
-  #gnav-input:checked ~ #gnav-content {top: 0;}
-  
-  #gnav-content{
+
+  #gnav-input:checked ~ #gnav-content {
+    top: 0;
+  }
+
+  #gnav-content {
     background-color: white;
     position: fixed;
-    top:-100%;
-    left:0;
+    top: -100%;
+    left: 0;
     z-index: 10;
     transition: 0.3s;
     width: 100%;
   }
-  .humb-menu{
-    &__title{
-      padding : 1.5rem;
+  .humb-menu {
+    &__title {
+      padding: 1.5rem;
     }
-    label{
+    label {
       display: block;
       display: flex;
       justify-content: space-between;
-      padding : 1.5rem;
-      cursor :pointer;
+      padding: 1.5rem;
+      cursor: pointer;
       border-top: 0.5px solid rgb(199, 197, 197);
     }
     input {
       display: none;
     }
-    .accshow{
+    .accshow {
       height: 0;
       padding: 0;
       overflow: hidden;
-      p{
-        padding : 1.5rem;
+      p {
+        padding: 1.5rem;
       }
     }
     .cssacc:checked + .accshow {
@@ -319,127 +424,127 @@ p{
     }
   }
 
-  #mainVisual{
+  #mainVisual {
     background-image: url(../images/business_06.jpeg);
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 300px;   //あとで消す
+    height: 300px; //あとで消す
   }
-  .topNavi{
+  .topNavi {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    .topNaviColumn{
+    .topNaviColumn {
       background-color: red;
       width: 100%;
       display: flex;
       flex-direction: column;
-      .topNaviPhoto{
+      .topNaviPhoto {
         width: 100%;
-        img{
+        img {
           width: 100%;
         }
-      .topNaviDetail{
-        display: flex;
-        flex-direction: column-reverse;
-        padding-right: 0;
-        }  
-        a{
+        .topNaviDetail {
+          display: flex;
+          flex-direction: column-reverse;
+          padding-right: 0;
+        }
+        a {
           text-align: right;
         }
       }
     }
   }
 
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-direction: column;
-    #conL{
+    #conL {
       width: 100%;
-      .contents_box{
+      .contents_box {
         font-size: 0.8rem;
         margin: 1rem 0;
         display: flex;
         flex-direction: column;
-        dt{
+        dt {
           float: left;
           margin-right: 1rem;
         }
-        dd{
-          .tab{
+        dd {
+          .tab {
             display: none;
           }
-          a{
+          a {
             margin-left: 1rem;
           }
           display: flex;
-          .b_img{
+          .b_img {
             margin: 0 0.5rem;
-            img{
+            img {
               height: 50px;
             }
           }
-          .b_right{
+          .b_right {
             padding: 0 1rem;
-            a{
+            a {
               margin-left: 0;
             }
           }
         }
       }
     }
-    #conR{
+    #conR {
       display: none;
       width: 30%;
       margin-left: 1rem;
       width: 30%;
-      h4 , a{
+      h4,
+      a {
         padding-left: 1rem;
       }
-      
     }
   }
-  .submenu{
-    li{
+  .submenu {
+    li {
       padding: 0.25rem;
     }
   }
-  .bnrL{
+  .bnrL {
     display: none;
-    ul{
+    ul {
       display: flex;
-      li{
+      li {
         margin-top: 2rem;
         margin-left: 2rem;
       }
-      li:first-of-type{
+      li:first-of-type {
         margin-left: 0;
       }
     }
   }
 
-  #footMenu{
+  #footMenu {
     display: none;
     margin: 2rem;
-    ul{
+    ul {
       width: 80%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      li{
+      li {
       }
     }
   }
-  #footer{
+  #footer {
     font-size: 0.7rem;
     text-align: center;
   }
 
-  .btn{
+  .btn {
     text-decoration: none;
   }
-  .btn1{
+  .btn1 {
     min-width: 200px;
     background: #f07d00;
     border: none;
@@ -452,58 +557,56 @@ p{
   }
 
   table {
-    font-size:12px;
+    font-size: 12px;
   }
 
   table {
-      width:100%;
-      border-collapse:collapse;
-      border:1px solid #999;
-      border-spacing:0;
-      line-height:1.8;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #999;
+    border-spacing: 0;
+    line-height: 1.8;
   }
 
   table th {
-      padding:5px;
-      border:1px solid #999;
-      border-width:0 0 1px 1px;
-      background:#EFEBEF;
-      font-weight:bold;
-      text-align:left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-width: 0 0 1px 1px;
+    background: #efebef;
+    font-weight: bold;
+    text-align: left;
   }
 
   table td {
-      padding:5px;
-      border:1px solid #999;
-      border-width:0 0 1px 1px;
-      text-align:left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-width: 0 0 1px 1px;
+    text-align: left;
   }
 
   table td ol {
-      margin:0;
-      padding:0 0 0 30px;
+    margin: 0;
+    padding: 0 0 0 30px;
   }
 
   table td li {
-      margin:0;
-      padding:0;
+    margin: 0;
+    padding: 0;
   }
-  textarea{
+  textarea {
     width: 100%;
   }
-
-  
-}//smart phone end----------------------------------------------------------------------------
+} //smart phone end----------------------------------------------------------------------------
 
 // tablet end start***************************************************************************
-@media screen and (min-width:481px) and (max-width:959px){
-  #header{
+@media screen and (min-width: 481px) and (max-width: 959px) {
+  #header {
     padding: 1rem 0;
-    #menu{
+    #menu {
       display: none;
     }
   }
-  #gnav-btn{
+  #gnav-btn {
     color: gray;
     padding: 10px;
     font-size: 30px;
@@ -515,39 +618,41 @@ p{
     border: solid 1px rgb(209, 202, 202);
     border-radius: 3px;
   }
-  
-  #gnav-input:checked ~ #gnav-content {top: 0;}
-  
-  #gnav-content{
+
+  #gnav-input:checked ~ #gnav-content {
+    top: 0;
+  }
+
+  #gnav-content {
     background-color: white;
     position: fixed;
-    top:-100%;
-    left:0;
+    top: -100%;
+    left: 0;
     z-index: 10;
     transition: 0.3s;
     width: 100%;
   }
-  .humb-menu{
-    &__title{
-      padding : 1.5rem;
+  .humb-menu {
+    &__title {
+      padding: 1.5rem;
     }
-    label{
+    label {
       display: block;
       display: flex;
       justify-content: space-between;
-      padding : 1.5rem;
-      cursor :pointer;
+      padding: 1.5rem;
+      cursor: pointer;
       border-top: 0.5px solid rgb(199, 197, 197);
     }
     input {
       display: none;
     }
-    .accshow{
+    .accshow {
       height: 0;
       padding: 0;
       overflow: hidden;
-      p{
-        padding : 1.5rem;
+      p {
+        padding: 1.5rem;
       }
     }
     .cssacc:checked + .accshow {
@@ -555,129 +660,129 @@ p{
     }
   }
 
-  #mainVisual{
+  #mainVisual {
     background-image: url(../images/business_06.jpeg);
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 300px;   //あとで消す
+    height: 300px; //あとで消す
   }
-  .topNavi{
+  .topNavi {
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
-    .topNaviColumn{
+    .topNaviColumn {
       width: 30%;
       display: flex;
       flex-direction: column;
-      .topNaviPhoto{
+      .topNaviPhoto {
         width: 100%;
-        img{
+        img {
           width: 100%;
         }
       }
-      .topNaviDetail{
+      .topNaviDetail {
         height: 100%;
         display: flex;
         flex-direction: column-reverse;
         padding-right: 0;
-        a{
+        a {
           text-align: right;
         }
       }
     }
   }
 
-  .wrapper{
+  .wrapper {
     display: flex;
     flex-direction: column;
-    #conL{
+    #conL {
       width: 100%;
-      .contents_box{
+      .contents_box {
         margin: 1rem 0;
-        dt{
+        dt {
           float: left;
           margin-right: 1rem;
         }
-        dd{
-          .gyoumu{
+        dd {
+          .gyoumu {
             padding: 0.3rem;
             color: white;
             background-color: rgb(6, 82, 6);
             border-radius: 5px;
           }
-          .release{
+          .release {
             padding: 0.3rem;
             color: white;
             background-color: red;
             border-radius: 5px;
           }
 
-          a{
+          a {
             margin-left: 1rem;
           }
           // margin-right: 1rem;
           display: flex;
-          .b_img{
+          .b_img {
             margin: 0 0.5rem;
-            img{
+            img {
               height: 50px;
             }
           }
-          .b_right{
+          .b_right {
             padding: 0 1rem;
-            a{
+            a {
               margin-left: 0;
             }
           }
         }
       }
     }
-    #conR{
+    #conR {
       display: none;
       width: 30%;
       margin-left: 1rem;
       width: 30%;
-      h4 , a{
+      h4,
+      a {
         padding-left: 1rem;
       }
-      
     }
   }
-  .submenu{
-    li{
+  .submenu {
+    li {
       padding: 0.25rem;
     }
   }
-  .bnrL{
-    ul{
+  .bnrL {
+    ul {
       display: flex;
       flex-direction: column;
-      li{
+      li {
         margin-top: 1rem;
       }
     }
   }
 
-  #footMenu{
+  #footMenu {
     margin: 2rem;
-    ul{
+    ul {
       width: 80%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      li{
+      li {
       }
     }
   }
-  #footer{
+  #footer {
     text-align: center;
   }
 
-  .btn{
+  .btn {
     text-decoration: none;
   }
-  .btn1{
+  .btn1 {
     min-width: 200px;
     background: #f07d00;
     border: none;
@@ -690,48 +795,44 @@ p{
   }
 
   table {
-    font-size:12px;
+    font-size: 12px;
   }
 
   table {
-      width:100%;
-      margin:10px;
-      border-collapse:collapse;
-      border:1px solid #999;
-      border-spacing:0;
-      line-height:1.8;
+    width: 100%;
+    margin: 10px;
+    border-collapse: collapse;
+    border: 1px solid #999;
+    border-spacing: 0;
+    line-height: 1.8;
   }
 
   table th {
-      padding:5px;
-      border:1px solid #999;
-      border-width:0 0 1px 1px;
-      background:#EFEBEF;
-      font-weight:bold;
-      text-align:left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-width: 0 0 1px 1px;
+    background: #efebef;
+    font-weight: bold;
+    text-align: left;
   }
 
   table td {
-      padding:5px;
-      border:1px solid #999;
-      border-width:0 0 1px 1px;
-      text-align:left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-width: 0 0 1px 1px;
+    text-align: left;
   }
 
   table td ol {
-      margin:0;
-      padding:0 0 0 30px;
+    margin: 0;
+    padding: 0 0 0 30px;
   }
 
   table td li {
-      margin:0;
-      padding:0;
+    margin: 0;
+    padding: 0;
   }
-  textarea{
+  textarea {
     width: 100%;
   }
-
-
-
-}//tablet end---------------------------------------------------------------------------------
-
+} //tablet end---------------------------------------------------------------------------------

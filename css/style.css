@@ -66,7 +66,7 @@ p {
     opacity: 0.5;
   }
   #header #menu ul li a:hover:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     bottom: -10px;
@@ -89,29 +89,61 @@ p {
     height: 400px;
   }
   .topNavi {
-    margin: 1rem 0;
+    width: 90%;
+    margin: 1rem auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .topNavi .topNaviColumn {
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+  .topNavi .topNaviColumn p {
+    margin-bottom: 2rem;
   }
   .topNavi .topNaviColumn .topNaviPhoto {
+    margin: 1rem 0;
     width: 100%;
   }
   .topNavi .topNaviColumn .topNaviPhoto img {
     width: 100%;
+    height: 300px;
+    object-fit: scale-down;
   }
   .topNavi .topNaviColumn .topNaviDetail {
     height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
     padding-right: 0;
+    position: relative;
   }
   .topNavi .topNaviColumn .topNaviDetail a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     text-align: right;
+    text-decoration: none;
+  }
+  .topNavi .topNaviColumn .topNaviDetail a:hover {
+    opacity: 0.5;
+  }
+  .topNavi .topNaviColumn .topNaviDetail a:hover:before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+    /*線の上下位置*/
+    width: 100%;
+    /*線の長さ*/
+    height: 2px;
+    /*線の太さ*/
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    /*位置調整*/
+    background-color: black;
+    /*線の色*/
+    border-radius: 5px;
+    /*線の丸み*/
   }
   .wrapper {
     display: flex;
@@ -124,50 +156,89 @@ p {
     width: 100%;
     margin: 1rem 0;
   }
-  .wrapper #conL .contents_box dt {
-    float: left;
-    margin-right: 1rem;
+  .wrapper #conL .contents_box a {
+    text-decoration: none;
+    position: relative;
   }
-  .wrapper #conL .contents_box dd {
+  .wrapper #conL .contents_box a:hover {
+    opacity: 0.5;
+  }
+  .wrapper #conL .contents_box a:hover:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    /*線の上下位置*/
+    width: 100%;
+    /*線の長さ*/
+    height: 2px;
+    /*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /*位置調整*/
+    background-color: black;
+    /*線の色*/
+  }
+  .wrapper #conL .contents_box ol {
     display: flex;
   }
-  .wrapper #conL .contents_box dd a {
-    margin-left: 1rem;
+  .wrapper #conL .contents_box ol time,
+  .wrapper #conL .contents_box ol span {
+    height: 100%;
+    margin-right: 2rem;
   }
-  .wrapper #conL .contents_box dd .b_img {
-    margin: 0 0.5rem;
-  }
-  .wrapper #conL .contents_box dd .b_img img {
-    height: 50px;
-  }
-  .wrapper #conL .contents_box dd .b_right {
-    padding: 0 1rem;
-  }
-  .wrapper #conL .contents_box dd .b_right a {
-    margin-left: 0;
-  }
-  .wrapper #conL .contents_box dd .gyoumu {
-    padding: 0.3rem;
+  .wrapper #conL .contents_box ol time .release,
+  .wrapper #conL .contents_box ol span .release {
     color: white;
-    background-color: #065206;
-    border-radius: 5px;
+    background-color: #bb1111;
+    border-radius: 3px;
+    padding: 0.5rem;
   }
-  .wrapper #conL .contents_box dd .release {
-    padding: 0.3rem;
+  .wrapper #conL .contents_box ol time .work,
+  .wrapper #conL .contents_box ol span .work {
     color: white;
-    background-color: red;
-    border-radius: 5px;
+    background-color: green;
+    border-radius: 3px;
+    padding: 0.5rem;
   }
   .wrapper #conR {
     width: 30%;
     margin-left: 1rem;
     width: 30%;
   }
-  .wrapper #conR h4, .wrapper #conR a {
-    padding-left: 1rem;
+  .submenu h4 {
+    padding-left: 0.5rem;
   }
   .submenu li {
     padding: 0.25rem;
+  }
+  .submenu li a {
+    margin-left: 1rem;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+  }
+  .submenu li a:hover {
+    opacity: 0.5;
+  }
+  .submenu li a:hover:before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+    /*線の上下位置*/
+    width: 100%;
+    /*線の長さ*/
+    height: 2px;
+    /*線の太さ*/
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    /*位置調整*/
+    background-color: black;
+    /*線の色*/
+    border-radius: 5px;
+    /*線の丸み*/
   }
   .bnrL ul {
     display: flex;
@@ -187,6 +258,33 @@ p {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+  }
+  #footMenu ul li a {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+  }
+  #footMenu ul li a:hover {
+    opacity: 0.5;
+  }
+  #footMenu ul li a:hover:before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+    /*線の上下位置*/
+    width: 100%;
+    /*線の長さ*/
+    height: 2px;
+    /*線の太さ*/
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    /*位置調整*/
+    background-color: black;
+    /*線の色*/
+    border-radius: 5px;
+    /*線の丸み*/
   }
   #footer {
     text-align: center;
@@ -219,7 +317,7 @@ p {
     padding: 5px;
     border: 1px solid #999;
     border-width: 0 0 1px 1px;
-    background: #EFEBEF;
+    background: #efebef;
     font-weight: bold;
     text-align: left;
   }
@@ -374,7 +472,8 @@ p {
     margin-left: 1rem;
     width: 30%;
   }
-  .wrapper #conR h4, .wrapper #conR a {
+  .wrapper #conR h4,
+  .wrapper #conR a {
     padding-left: 1rem;
   }
   .submenu li {
@@ -435,7 +534,7 @@ p {
     padding: 5px;
     border: 1px solid #999;
     border-width: 0 0 1px 1px;
-    background: #EFEBEF;
+    background: #efebef;
     font-weight: bold;
     text-align: left;
   }
@@ -596,7 +695,8 @@ p {
     margin-left: 1rem;
     width: 30%;
   }
-  .wrapper #conR h4, .wrapper #conR a {
+  .wrapper #conR h4,
+  .wrapper #conR a {
     padding-left: 1rem;
   }
   .submenu li {
@@ -650,7 +750,7 @@ p {
     padding: 5px;
     border: 1px solid #999;
     border-width: 0 0 1px 1px;
-    background: #EFEBEF;
+    background: #efebef;
     font-weight: bold;
     text-align: left;
   }

@@ -4,66 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">                    <!--レスポンシブ-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">    <!--fontawsome-->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css" type="text/css" />    <!--reset.css-->
-  <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet"><!--書き換え-->
   <title>corporate_sample</title>
-<?php wp_head(); ?><!--headerfookpoint-->
+  <?php wp_head(); ?><!--headerfookpoint-->
 </head><!--headend-->
 
-<body> <!--bodystart-->
-  <div id="container">
-
-    <nav id="header"><!--headerstart-->
-      <h1><a href="<?php echo home_url(); ?>">"CORPORATE_SAMPLE_SITE"</a></h1>
-      <div id="menu">
-        <ul>
-          <!--headerのwordpress化-->
-          <?php wp_nav_menu( array(
+<body <?php body_class(); ?>><!--bodystart-->
+<?php wp_body_open(); ?> <!--bodyfookpoint-->
+<div id="container">
+  
+  <header id="header"><!--headerstart-->
+  <h1><a href="<?php echo home_url(); ?>">"CORPORATE_SAMPLE_SITE"</a></h1>
+  <!--headerのwordpress化-->
+  <!--↓存在チェック-->
+  <?php
+        if ( has_nav_menu( 'place_global2' ) ) {
+          wp_nav_menu( array(
             'theme_location'=>'place_global2', //メニュー名place_global2
-            'container'     =>'', 
-            'menu_class'    =>'',
-            'items_wrap' => '%3$s',//<ul>を出力しない
-          ));?>
-        </ul>
-      </div>
-    </nav><!--headerend-->
-
-    <div class="humb-menu"><!--humbmenustart-->
-      <input id="gnav-input" type="checkbox">
-      <label for="gnav-input" id="gnav-btn">
-        <div i class="fas fa-bars"></div>
-      </label>
+            'container'     =>'nav', 
+            'container_id'  =>'menu'
+          ));
+        }?>
+    </header><!--headerend-->
     
-      <div id="gnav-content">
-        <!-- タイトルを記載ください -->
-        <div class="humb-menu__title">リンク</div>
-        <label for="label1">
-          <!-- 親要素の名前 -->
-          <p>ブログ</p><p>＋</p>
-        </label>
-        <input type="checkbox" id="label1" class="cssacc" />
-        <div class="accshow">
-          <!-- 子要素の名前 -->
-          <p>content</p>
-          <p>content</p>
-          <p>content</p>
-          <p>content</p>
-        </div>
+    <nav class="humb-menu"><!--humbmenustart-->
+    <input id="gnav-input" type="checkbox">
+    <label for="gnav-input" id="gnav-btn">
+      <div i class="fas fa-bars"></div>
+    </label>
+    
+    <div id="gnav-content">
+      <!-- タイトルを記載ください -->
+      <div class="humb-menu__title">リンク</div>
       
-        <label for="label2">
-          <p>リリース</p><p>＋</p>
-        </label>
+        <label for="label"><p>会社概要</p></label>
+        
+        <label for="label"><p>事業内容</p></label>
+
+        <label for="label2"><p>リリース</p><p>＋</p></label>
         <input type="checkbox" id="label2" class="cssacc" />
         <div class="accshow">
-          <p>content</p>
-          <p>content</p>
-          <p>content</p>
-          <p>content</p>
+          <?php
+            $infoPosts = get_posts('numberposts=3&category=8');
+            foreach($infoPosts as $post): 
+          ?>
+            <ol>
+              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('m月d日'); ?></time>
+              <span>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </span>
+            </ol>
+          <?php endforeach; ?>
         </div>
-
-        <label for="label3">
-          <p>業務について</p><p>＋</p>
-        </label>
+          
+        <label for="label3"><p>業務について</p><p>＋</p></label>
         <input type="checkbox" id="label3" class="cssacc" />
         <div class="accshow">
           <p>content</p>
@@ -71,5 +64,25 @@
           <p>content</p>
           <p>content</p>
         </div>
-      </div>
-    </div><!--humbmenuend-->
+          
+        <label for="label"><p>お問い合わせ</p></label>
+        <label for="label1"><p>ブログ</p><p>＋</p></label>
+        <input type="checkbox" id="label1" class="cssacc" />
+        <div class="accshow">
+          <!--loopstart-->
+          <?php
+            $infoPosts = get_posts('numberposts=3&category=9');
+            foreach($infoPosts as $post): 
+              ?>
+            <ol>
+              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('m月d日'); ?></time>
+              <span>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </span>
+            </ol>
+            <!--loopend-->
+            <?php endforeach; ?>
+          </div>
+        </div>
+
+      </nav><!--humbmenuend-->
