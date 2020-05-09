@@ -9,11 +9,9 @@
       <?php endwhile; endif; ?>
 
       <!--ページの条件分岐-->
-      <?php if (is_page(array('63'))) {?>
-
-      <?php }else{ ?>
-        <a class="btn" href="<?php home_url(); ?>contact"><button class="btn1">お問い合わせ</button></a>
-      <?php } ?>
+      <?php if (!is_page(array('contact'))) :?><!--contactページではない場合-->
+        <a class="btn" href="<?php echo home_url('/contact'); ?>"><button class="btn1">お問い合わせ</button></a>
+      <?php endif; ?>
 
     </div><!--conLend-->
 

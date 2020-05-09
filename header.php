@@ -3,8 +3,6 @@
 <head><!--headstart-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">                    <!--レスポンシブ-->
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">    <!--fontawsome-->
-  <title>corporate_sample</title>
   <?php wp_head(); ?><!--headerfookpoint-->
 </head><!--headend-->
 
@@ -29,7 +27,7 @@
     <nav class="humb-menu"><!--humbmenustart-->
     <input id="gnav-input" type="checkbox">
     <label for="gnav-input" id="gnav-btn">
-      <div i class="fas fa-bars"></div>
+      <span class="fas fa-bars"></span>
     </label>
     
     <div id="gnav-content">
