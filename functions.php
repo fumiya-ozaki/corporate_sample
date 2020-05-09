@@ -3,6 +3,7 @@
     $version = wp_get_theme()->get( 'Version' );
     wp_enqueue_style('theme-reset', get_template_directory_uri() . '/css/reset.css', array(),$version );
     wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/style.min.css', array(),$version );
+    wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css', array(), '5.6.1', true);
   }
   add_action( 'wp_enqueue_scripts' ,'theme_script' );
 

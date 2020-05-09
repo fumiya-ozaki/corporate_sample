@@ -6,7 +6,7 @@
     <?php if (in_category(array('9'))) {?>
 
       <div class="information"><!--blogstart-->
-        <h2><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></h2>
+        <h2><?php the_archive_title(); ?></h2>
         <!--loopstart-->
         <?php if(have_posts()): while(have_posts()): the_post();?>
           <div class="contents_box">
@@ -27,7 +27,7 @@
     <?php } elseif(in_category(array('8'))){ ?>
 
       <div class="information"><!--releasestart-->
-        <h2>リリース</h2>
+        <h2><?php the_archive_title(); ?></h2>
         <!--loopstart-->
         <?php if(have_posts()): while(have_posts()): the_post();?>
           <div class="contents_box">
@@ -46,7 +46,7 @@
     <?php }else{ ?>
 
       <div class="information"><!--workstart-->
-      <h2>業務について</h2>
+      <h2><?php the_archive_title(); ?></h2>
       <!--loopstart-->
       <?php if(have_posts()): while(have_posts()): the_post();?>
           <div class="contents_box">
@@ -64,8 +64,7 @@
       </div><!--workend-->
 
     <?php } ?>
-      
-    </div><!--conLend-->
+  </div><!--conLend-->
 <?php get_sidebar(); ?>
 
   </div><!--wrapperend-->
